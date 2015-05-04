@@ -1,0 +1,39 @@
+#   OS
+.DS_Store
+*.pyc
+*.swp
+*~
+
+#   IDE
+*.sublime-*
+
+# installation
+node_modules
+
+# compile
+#app/static/medias/m_backup
+#app/static/medias-webp
+#app/www_src/js
+#app/www_src/css
+#app/www_src_m/js
+#app/www_src_m/css
+#app/app.yaml
+# ignore all webp files, they are rendered by gulp.
+*.webp
+
+npm-debug.log.*
+
+*.map
+*.log
+
+# build ignore the folder.
+build
+
+# ignore guilp medias-webp folder
+app/medias-webp/*
+
+
+app/static/ui/iconfont/*.woff
+app/static/ui/iconfont/*.ttf
+app/static/ui/iconfont/*.svg
+app/static/ui/iconfont/*.eot
