@@ -6,7 +6,7 @@ module.exports = {
   resolve: {
     extensions: ["", ".js"]
   },
-  entry: "./entry.js",
+  entry: "./static/scripts/entry.js",
   output: {
     path: __dirname,
     filename: "bundle.js"

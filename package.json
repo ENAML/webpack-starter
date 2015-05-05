@@ -21,6 +21,7 @@
   "dependencies": {
   },
   "devDependencies": {
+    "nodemon": "x",
     "webpack": "x",
     "css-loader": "x",
     "style-loader": "x",
@@ -34,10 +35,13 @@
   },
 
   "scripts" : {
-    "css:stylus" : "stylus -u autoprefixer-stylus styl/app.styl -m -o css/ -w",
-    "css:autoprefixer" : "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, > 1%, opera 12' css/app.css",
+    "css:dev" : "nodemon -e styl -x \"npm run css:stylus && npm run css:autoprefixer\"",
+    "css:stylus" : "stylus static/styl/app.styl -m -o static/css/",
+    "css:autoprefixer" : "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' static/css/app.css",
+
     "js" : "webpack-dev-server --progress --colors",
-    "work" : "parallelshell 'npm run css:stylus' 'npm run js'",
+
+    "work" : "parallelshell 'npm run css:dev' 'npm run js'",
     "stopserver" : "killall node"
   },
 

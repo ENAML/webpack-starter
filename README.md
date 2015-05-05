@@ -20,7 +20,7 @@ $ npm install webpack-dev-server -g
 $ npm install
 ```
 
-- Run Local Server
+- Start webpack server (for JS) and nodemon (for CSS) both via npm build 
 ```
 $ webpack-dev-server --progress --colors
 ```
