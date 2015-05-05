@@ -1,5 +1,7 @@
 # webpack-starter
 
+- starter using webpack and NPM as a build tool (http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/)
+
 ## Quickstart
 To set up this project on your local machine:
 
