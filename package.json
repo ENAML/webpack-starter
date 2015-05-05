@@ -23,13 +23,14 @@
   "devDependencies": {
     "webpack": "x",
     "css-loader": "x",
-    "style-loader": "x"
-
+    "style-loader": "x",
+    "stylus-loader": "x",
+    "extract-text-webpack-plugin": "x",
+    "stylus" : "x"
   },
 
   "scripts" : {
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
-    "jsonlint" : "bash scripts/jsonlint.sh"
+    "css" : "stylus -p -m styl/app.styl > css/main.css"
   },
 
   "pre-commit": [ ],
