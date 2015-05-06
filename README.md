@@ -24,7 +24,7 @@ $ npm install
 
 - Start webpack server (for JS) and nodemon (for CSS) both via npm build 
 ```
-$ webpack-dev-server --progress --colors
+$ npm run work
 ```
 
 Open http://localhost:8080/webpack-dev-server/bundle
