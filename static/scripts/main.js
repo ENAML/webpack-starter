@@ -5,3 +5,4 @@ var AppComponent = require('./appComponent.js');
 
 
 console.log($('h1'));
+console.log(React);
