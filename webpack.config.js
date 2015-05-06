@@ -39,7 +39,11 @@ var config = {
 config.addVendor('jQuery', npm_dir + "/jquery/dist/jquery.min.js");
 config.addVendor('react', npm_dir + "/react/dist/react.min.js");
 
+config.addVendor('bootstrap', npm_dir + '/bootstrap/dist/js/bootstrap.min.js');
+config.addVendor('bootstrap.css', npm_dir + '/bootstrap/dist/css/bootstrap.min.css');
 
-console.log(config);
+
+
+
 
 module.exports = config;

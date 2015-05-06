@@ -20,7 +20,8 @@
   "keywords": [],
   "dependencies": {
     "jsx-loader": "^0.13.2",
-    "react": "^0.13.2"
+    "react": "^0.13.2",
+    "bootstrap": "^3.3.4"
   },
   "devDependencies": {
     "nodemon": "x",
