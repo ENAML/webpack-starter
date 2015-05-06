@@ -4,11 +4,11 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var npm_dir = __dirname + '/node_modules'
 
 var config = {
-
   cache:true,
   addVendor: function(name, path) {
     this.resolve.alias[name] = path;
-    this.module.noParse.push(new RegExp(path));
+    // this.module.noParse.push(new RegExp(path)); //this should work but bottom is better
+    this.module.noParse.push(path);
   },
   cache:true,
   resolve: {
@@ -39,5 +39,7 @@ var config = {
 config.addVendor('jQuery', npm_dir + "/jquery/dist/jquery.min.js");
 config.addVendor('react', npm_dir + "/react/dist/react.min.js");
 
+
+console.log(config);
 
 module.exports = config;
