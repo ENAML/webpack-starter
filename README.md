@@ -28,3 +28,7 @@ $ webpack-dev-server --progress --colors
 ```
 
 Open http://localhost:8080/webpack-dev-server/bundle
+
+## TODO
+- set up chunks for different pages & lazy loading page-specific js
+- set up deploy/build npm scripts for css & html
