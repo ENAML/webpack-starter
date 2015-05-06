@@ -7,7 +7,8 @@ var config = {
   cache:true,
   addVendor: function(name, path) {
     this.resolve.alias[name] = path;
-    this.module.noParse.push(new RegExp(path));
+    // this.module.noParse.push(new RegExp(path)); //this should work but bottom is better
+    this.module.noParse.push(path);
   },
   cache:true,
   resolve: {
