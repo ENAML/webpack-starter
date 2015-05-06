@@ -22,7 +22,7 @@ var config = {
     vendors: ['jQuery']
   },
   output: {
-    path: __dirname,
+    path: process.env.NODE_ENV === 'production' ? './dist' : __dirname,
     filename: "bundle.js"
   },
   module: {
