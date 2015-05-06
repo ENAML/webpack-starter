@@ -10,14 +10,16 @@ var config = {
     // this.module.noParse.push(new RegExp(path)); //this should work but bottom is better
     this.module.noParse.push(path);
   },
-  cache:true,
   resolve: {
     alias: {
       // added by addVendor function
     },
     extensions: ["", ".js"]
   },
-  entry: "./static/scripts/main.js",
+  entry: {
+    app: ["./static/scripts/main.js"],
+    vendors: ['jQuery','react']
+  },
   output: {
     path: __dirname,
     filename: "bundle.js"
@@ -32,7 +34,7 @@ var config = {
     ]
   },
   plugins: [
-
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 };
 
