@@ -3,10 +3,14 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var npm_dir = __dirname + '/node_modules'
 
-module.exports = {
+var config = {
+  addVendor: function(name, path) {
+    this.resolve.alias[name] = path;
+    this.module.noParse.push(new RegExp(path));
+  },
   cache:true,
   resolve: {
-    'jQuery' : npm_dir + "/jquery/dist/jquery.min.js",
+    alias: {},
     extensions: ["", ".js"]
   },
   entry: "./static/scripts/main.js",
@@ -24,3 +28,7 @@ module.exports = {
 
   ]
 };
+
+config.addVendor('jQuery', npm_dir + "/jquery/dist/jquery.min.js");
+
+module.exports = config;
