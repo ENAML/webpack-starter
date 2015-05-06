@@ -4,13 +4,16 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var npm_dir = __dirname + '/node_modules'
 
 var config = {
+  cache:true,
   addVendor: function(name, path) {
     this.resolve.alias[name] = path;
     this.module.noParse.push(new RegExp(path));
   },
   cache:true,
   resolve: {
-    alias: {},
+    alias: {
+      // added by addVendor function
+    },
     extensions: ["", ".js"]
   },
   entry: "./static/scripts/main.js",
@@ -19,7 +22,10 @@ var config = {
     filename: "bundle.js"
   },
   module: {
-    noParse: [npm_dir + "/jquery/dist/jquery.min.js"],
+    noParse: [
+      // doesn't re-minify code (adds a few KBs of size but much faster reload speed)
+      // added by addVendor function
+    ],
     loaders: [
       { test: /\.js$/, loader: 'jsx-loader' }
     ]

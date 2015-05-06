@@ -19,6 +19,7 @@
   ],
   "keywords": [],
   "dependencies": {
+    "bootstrap": "^3.3.4",
     "jsx-loader": "^0.13.2"
   },
   "devDependencies": {

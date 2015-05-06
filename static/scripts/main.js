@@ -1,5 +1,5 @@
-var $ = require('jQuery')
-var AppComponent = require('./appComponent.js');
+var React = require('react');
 
+var AppComponent = require('./AppComponent.js');
 
-console.log($('h1'));
+React.render(<AppComponent/>, document.body);
