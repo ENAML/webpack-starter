@@ -17,7 +17,10 @@ var config = {
     },
     extensions: ["", ".js"]
   },
-  entry: "./static/scripts/main.js",
+  entry: {
+    app: ["./static/scripts/main.js"],
+    vendors: ['jQuery']
+  },
   output: {
     path: __dirname,
     filename: "bundle.js"
@@ -32,7 +35,7 @@ var config = {
     ]
   },
   plugins: [
-
+    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
   ]
 };
 

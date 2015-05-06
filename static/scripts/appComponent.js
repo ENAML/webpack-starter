@@ -1,9 +1,3 @@
-var React = require('react');
+var $ = require('jQuery');
 
-module.exports = React.createClass({
-  render: function () {
-    return (
-      <h1>Hello world!</h1>
-    );
-  }
-});
+module.exports = "hello world!";
