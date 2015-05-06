@@ -7,6 +7,7 @@ module.exports = {
   cache:true,
   resolve: {
     'jQuery' : npm_dir + "/jquery/dist/jquery.min.js",
+    'react' : npm_dir + "/react/dist/react.min.js",
     extensions: ["", ".js"]
   },
   entry: "./static/scripts/main.js",
@@ -15,7 +16,11 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-    noParse: [npm_dir + "/jquery/dist/jquery.min.js"],
+    noParse: [
+      // doesn't re-minify code (adds a few KBs of size but much faster reload speed)
+      npm_dir + "/jquery/dist/jquery.min.js",
+      npm_dir + "/react/dist/react.min.js"
+    ],
     loaders: [
       { test: /\.js$/, loader: 'jsx-loader' }
     ]
