@@ -19,6 +19,7 @@
   ],
   "keywords": [],
   "dependencies": {
+    "jsx-loader": "^0.13.2"
   },
   "devDependencies": {
     "nodemon": "x",
@@ -27,52 +28,46 @@
     "style-loader": "x",
     "stylus-loader": "x",
     "extract-text-webpack-plugin": "x",
-    "stylus" : "x",
-    "cssmin" : "x",
+    "stylus": "x",
+    "cssmin": "x",
     "autoprefixer": "x",
     "autoprefixer-stylus": "x",
-    "parallelshell" : "x"
+    "parallelshell": "x"
   },
-
-  "scripts" : {
-    "css:dev" : "nodemon -e styl -x \"npm run css:stylus && npm run css:autoprefixer\"",
-    "css:stylus" : "stylus static/styl/app.styl -m -o static/css/",
-    "css:autoprefixer" : "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' -m static/css/app.css",
-
-    "js" : "webpack-dev-server --progress --colors",
-
-    "work" : "parallelshell 'npm run css:dev' 'npm run js'",
-    "stopserver" : "killall node"
+  "scripts": {
+    "css:dev": "nodemon -e styl -x \"npm run css:stylus && npm run css:autoprefixer\"",
+    "css:stylus": "stylus static/styl/app.styl -m -o static/css/",
+    "css:autoprefixer": "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' -m static/css/app.css",
+    "js": "webpack-dev-server --devtool eval --progress --colors",
+    "work": "parallelshell 'npm run css:dev' 'npm run js'",
+    "stopserver": "killall node"
   },
-
-  "pre-commit": [ ],
-
-  "jshintConfig" : {
-    "asi"           : true,
-    "laxbreak"      : true,
-    "bitwise"       : true,
-    "boss"          : false,
-    "curly"         : true,
-    "eqeqeq"        : true,
-    "eqnull"        : false,
-    "evil"          : false,
-    "expr"          : false,
-    "forin"         : false,
-    "immed"         : true,
-    "indent"        : 2,
-    "latedef"       : true,
-    "loopfunc"      : false,
-    "noarg"         : true,
-    "node"          : true,
-    "regexp"        : true,
-    "regexdash"     : false,
-    "strict"        : false,
-    "scripturl"     : true,
-    "shadow"        : false,
-    "supernew"      : false,
-    "sub"           : true,
-    "undef"         : true,
-    "white"         : true
+  "pre-commit": [],
+  "jshintConfig": {
+    "asi": true,
+    "laxbreak": true,
+    "bitwise": true,
+    "boss": false,
+    "curly": true,
+    "eqeqeq": true,
+    "eqnull": false,
+    "evil": false,
+    "expr": false,
+    "forin": false,
+    "immed": true,
+    "indent": 2,
+    "latedef": true,
+    "loopfunc": false,
+    "noarg": true,
+    "node": true,
+    "regexp": true,
+    "regexdash": false,
+    "strict": false,
+    "scripturl": true,
+    "shadow": false,
+    "supernew": false,
+    "sub": true,
+    "undef": true,
+    "white": true
   }
-
 }

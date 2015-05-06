@@ -6,14 +6,14 @@ module.exports = {
   resolve: {
     extensions: ["", ".js"]
   },
-  entry: "./static/scripts/entry.js",
+  entry: "./static/scripts/main.js",
   output: {
     path: __dirname,
     filename: "bundle.js"
   },
   module: {
     loaders: [
-
+      { test: /\.js$/, loader: 'jsx-loader' }
     ]
   },
   plugins: [
