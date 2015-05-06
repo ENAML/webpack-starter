@@ -37,7 +37,7 @@
   "scripts" : {
     "css:dev" : "nodemon -e styl -x \"npm run css:stylus && npm run css:autoprefixer\"",
     "css:stylus" : "stylus static/styl/app.styl -m -o static/css/",
-    "css:autoprefixer" : "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' static/css/app.css",
+    "css:autoprefixer" : "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' -m static/css/app.css",
 
     "js" : "webpack-dev-server --progress --colors",
 
