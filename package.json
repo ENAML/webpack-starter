@@ -42,6 +42,7 @@
     "css:autoprefixer": "autoprefixer -b 'last 2 versions, Firefox > 20, Firefox <= 20, iOS 7, > 1%, opera 12' -m static/css/app.css",
     "js": "webpack-dev-server --devtool eval --progress --colors",
     "work": "parallelshell 'npm run css:dev' 'npm run js'",
+    "build" : "NODE_ENV=production webpack -p",
     "stopserver": "killall node"
   },
   "pre-commit": [],

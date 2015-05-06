@@ -7,4 +7,3 @@ var $ = require('jQuery'),
 var AppComponent = require('./appComponent.js');
 
 React.render(<AppComponent/>, document.body);
-
